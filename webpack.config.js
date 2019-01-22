@@ -5,5 +5,13 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'app.build.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                loader: "babel-loader"
+            }
+        ]
     }
 };
